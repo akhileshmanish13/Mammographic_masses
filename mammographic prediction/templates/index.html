@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<div lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logistic Regression</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+
+<nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Mammographic</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Prediction</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <center>
+        <img src="{{ url_for('static',filename='img/ml6.jpg') }}", height= 300, width=1200 alt="Image"/>
+    </center>
+
+<h2>Welcome to Mammographic Mass Prediction</h2>
+<form action="{{url_for('logistic')}}" method="post">
+            <div>
+                <label>Person Age:</label>
+                <input type="text" name ="Age" >
+            </div>
+            <div>
+                <label>shape:</label>
+                <input type="text" name ="shape" >
+            </div>
+            <div>
+                <label>margin:</label>
+                <input type="text" name ="margin" >
+            </div>
+            <div>
+                <label>density:</label>
+                <input type="text" name ="Density" >
+            </div>
+
+
+            <center>
+                <button type="submit" class="btn btn-success">
+                    Submit
+                </button>
+            </center>
+</form>
+</body>
+</html>
+
+
